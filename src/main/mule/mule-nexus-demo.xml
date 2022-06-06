@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="2aee49fe-0edb-46cf-967d-39b2c3fedc22" >
+		<http:listener-connection host="0.0.0.0" port="8082" />
+	</http:listener-config>
+	<flow name="mule-nexus-demoFlow" doc:id="16d39c0f-438c-44ea-a27f-ba1866ad3b1e" >
+		<http:listener doc:name="Listener" doc:id="7b75ebc6-d8d8-4d63-b04e-edb9bc67fa15" config-ref="HTTP_Listener_config" path="/nexus"/>
+		<logger level="INFO" doc:name="Logger" doc:id="b066a768-a647-445a-a5a5-0bd737a0c521" message="QueryParameters: #[attributes.queryParams.id]"/>
+	</flow>
+</mule>
