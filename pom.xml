@@ -50,6 +50,7 @@
 							<mule.env>${mule.env}</mule.env>
 						</properties>
 					</cloudHubDeployment>
+					</configuration>
 			</plugin>
 		</plugins>
 	</build>
