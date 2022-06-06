@@ -34,20 +34,22 @@
 				<configuration>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
+						<server>${server}</server>
+						<businessGroup>USW IT</businessGroup>
 						<muleVersion>${app.runtime}</muleVersion>
-						<server>anypoint_usw</server>
-						<!-- <connectedAppClientId>deb0f82c95ab48c29aeb262fcbf467ad</connectedAppClientId> -->
-						<!-- <connectedAppClientSecret>6eDF54863fF3421d8D2F11A0258c2Ce0</connectedAppClientSecret> -->
-						<!-- <connectedAppGrantType>client_credentials</connectedAppGrantType> -->
-						<applicationName>${artifactId}-dev</applicationName>
-						<environment>Dev</environment>
-						<workers>1</workers>
-						<workerType>MICRO</workerType>
-						<region></region>
-						<businessGroup>Mulesoft-IT</businessGroup>
+						<applicationName>${app.name}-${mule.env}</applicationName>
+						<workers>${worker}</workers>
+						<workerType>${workerType}</workerType>
+						<environment>${environment}</environment>
+						<region>eu-west-2</region>
 						<objectStoreV2>true</objectStoreV2>
+						<properties>
+							<project.name>${project.name}-${mule.env}</project.name>
+							<project.version>${project.version}</project.version>
+							<mule.key>${mule.key}</mule.key>
+							<mule.env>${mule.env}</mule.env>
+						</properties>
 					</cloudHubDeployment>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
