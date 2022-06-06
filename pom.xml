@@ -35,12 +35,10 @@
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>${app.runtime}</muleVersion>
-<!-- 						<username>Mule-Latest</username> -->
-<!-- 						<password>Cappy#123</password> -->
-						<!-- <server>exchange-server</server> -->
-						<connectedAppClientId>deb0f82c95ab48c29aeb262fcbf467ad</connectedAppClientId>
-						<connectedAppClientSecret>6eDF54863fF3421d8D2F11A0258c2Ce0</connectedAppClientSecret>
-						<connectedAppGrantType>client_credentials</connectedAppGrantType>
+						<server>anypoint_usw</server>
+						<!-- <connectedAppClientId>deb0f82c95ab48c29aeb262fcbf467ad</connectedAppClientId> -->
+						<!-- <connectedAppClientSecret>6eDF54863fF3421d8D2F11A0258c2Ce0</connectedAppClientSecret> -->
+						<!-- <connectedAppGrantType>client_credentials</connectedAppGrantType> -->
 						<applicationName>${artifactId}-dev</applicationName>
 						<environment>Dev</environment>
 						<workers>1</workers>
